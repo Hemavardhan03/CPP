@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a,b,c,choice;
+	cout<<"provide your choice";
+	cin>>choice;
+	switch(choice)
+	{
+	     	case 1:
+            cout<<"enter two integers:";
+            cin>>a>>b;
+            c=a+b;
+            cout<<"addition of"<<a<<"and"<<b<<"="<<c;
+            break;
+            
+            case 2:
+            cout<<"enter two integers:";
+            cin>>a>>b;
+            c=a-b;
+            cout<<"subtraction of"<<a<<"and"<<b<<"="<<c;
+            break;
+            
+            case 3:
+            cout<<"enter two integers:";
+            cin>>a>>b;
+            c=a*b;
+            cout<<"multiplication of"<<a<<"and"<<b<<"="<<c;
+            break;
+	       
+	        case 4:
+	       	cout<<"enter two integers:";
+            cin>>a>>b;
+            c=a/b;
+            cout<<"division of"<<a<<"and"<<b<<"="<<c;
+            break;
+            
+            case 5:
+            	cout<<"enter two integers:";
+            cin>>a>>b;
+            c=a%b;
+            cout<<"modulus of"<<a<<"and"<<b<<"="<<c;
+            break;
+            
+            
+            default:
+            	cout<<"enter valid input 1-5";
+            	break;
+        }
+    }
