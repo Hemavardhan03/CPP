@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class biggest
+{
+	int x,y;
+	public:
+		void input();
+		void display();
+} ;
+
+void biggest :: input()
+{
+	cout<<"enter x & y value:";
+	cin>>x>>y;
+}
+void biggest :: display()
+{
+	if (x>y)
+	{
+	cout<<"x is biggest"<<x;}
+	else{
+	cout<<"y is biggest"<<y;
+	}
+}
+int main()
+{
+	biggest x;
+	x.input();
+	x.display();
+	return 0;
+}
