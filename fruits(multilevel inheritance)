@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+class fruit{
+	public:
+	     int apples,mangoes,total_fruits;
+		void getdata()
+		{
+			cout<<"apples and mangoes are in the basket";
+			
+		}
+};
+class apple:public fruit{
+	public:
+		void getdata1()
+		{
+		 cout<<"enter no.of apples";
+		 cin>>apples;
+		}
+};
+class mango:public apple{
+	public:
+		void getdata2()
+		{
+		apple::getdata1();
+		cout<<"enter no.of mangoes=";
+		cin>>mangoes;
+		}
+};
+class total:public mango{
+	public:
+		void getdata3()
+		{
+		mango::getdata2();
+		total_fruits=apples+mangoes;
+		cout<<"total no.of fruits="<<total_fruits;
+	}
+};
+int main()
+{
+total t;
+t.getdata3();
+return 0;
+}
