@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+class bank{
+		
+	public:
+		int sbi,icici,axis;
+		void getdata()
+		{
+		
+		cout<<"enter rate of interest of sbi";
+		cin>>sbi;
+		cout<<"enter rate of interest of icici";
+		cin>>icici;
+		cout<<"enter rate of interest of axis";
+		cin>>axis;
+	}
+};
+
+class sbi:public bank
+{
+	int sbi;
+	public:
+		void getdata1()
+		{
+			cout<<"\nrate of interest of sbi bank="<<sbi;
+		}
+	};
+
+class icici:public bank
+	{
+    public:
+    	int icici;
+		
+		void getdata2()
+		{
+			cout<<"\nrate of interest of icici bank="<<icici;
+		}
+	};
+
+class axis:public bank{
+
+	public:
+		 
+		void getdata3()
+		{
+			cout<<"\nrate of interest of axis bank="<<axis;
+		}
+};
+int main()
+{
+	bank b;
+	b.getdata();
+	sbi s;
+	s.getdata1();
+	icici i;
+	i.getdata2();
+	axis a;
+	a.getdata3();
+	return 0;
+}
