@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+class arithmetic{
+public:
+	int x=6,y=3;
+		virtual void getdata(){
+			cout<<"\nenter x and y values";
+			cin>>x>>y;
+		}
+};
+class add:public arithmetic{
+	public:
+		virtual void getdata(){
+			cout<<"\nadiition of two numbers="<<x+y;
+		}
+};
+class subtract:public arithmetic{
+	public:
+	    virtual void getdata(){
+			cout<<"\nsubtract of two numbers="<<x-y;
+		}
+};
+class multi:public arithmetic{
+	public:
+		virtual void getdata(){
+			cout<<"\nmultiplication of two numbers="<<x*y;
+		}
+};
+class division:public arithmetic{
+	public:
+		virtual void getdata(){
+			cout<<"\ndivision of two numbers="<<x/y;
+		}
+};
+class remainder:public arithmetic{
+	public:
+		
+		virtual void getdata(){
+			cout<<"\nmodulus of two numbers="<<x%y;
+		}
+};
+int main()
+{
+	arithmetic *a;
+	add a1;
+	subtract s1;
+	multi m1;
+	division d1;
+	remainder r1;
+	a=&a1;
+	a->getdata();
+	a=&s1;
+	a->getdata();
+	a=&m1;
+	a->getdata();
+	a=&d1;
+	a->getdata();
+	a=&r1;
+	a->getdata();
+}
